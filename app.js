@@ -13,6 +13,15 @@ function errorHandler(error) {
   alert("something wrong with server! try again after some time");
 }
 
+btn.addEventListener("click", function btnHandler() {
+  fetch(translateURL(userinput.value))
+    .then((response) => response.json())
+    .then((json) => {
+      output.innerText = json.contents.translated;
+    })
+    .catch(errorHandler);
+});
+
 // function btnHandler() {
 //     var inputText = txtInput.value; // taking input
 
@@ -27,12 +36,3 @@ function errorHandler(error) {
 // };
 
 // btnTranslate.addEventListener("click", btnHandler)
-
-btn.addEventListener("click", function btnHandler() {
-  fetch(translateURL(userinput.value))
-    .then((response) => response.json())
-    .then((json) => {
-      output.innerText = json.contents.translated;
-    })
-    .catch(errorHandler);
-});
