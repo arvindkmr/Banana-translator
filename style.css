@@ -17,11 +17,11 @@
 
 .btn
 {
-    background-color: #F2C94C;
+    background-color: #4ee641;
     border: none;padding: 20px;
     cursor: pointer;
     width: 100%;
-    border: 1px solid olive;
+    border: 1px solid rgb(240, 73, 87);
     border-radius: 6px;
 }
 
